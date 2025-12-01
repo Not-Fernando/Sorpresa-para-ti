@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Heart of Stars</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./style/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="./style/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- Pantalla de bienvenida -->
+  <div id="welcome-screen">
+    <div class="welcome-content">
+      <h1>Bienvenida a un cielo de estrellas por la noche</h1>
+      <p>He creado esto para ti, para que sintamos un momento de calma y estrellas juntos 🌙✨</p>
+      <button id="start-button">Toque aquí para la melodía</button>
+    </div>
+  </div>
+
+  <!-- Capa cósmica (nebulosas suaves) -->
+  <div class="cosmic-bg"></div>
+
+  <!-- Canvas para estrellas y meteoros -->
+  <canvas id="canvas"></canvas>
+
+  <!-- Música de fondo -->
+  <audio id="bg-music" loop>
+    <source src="./style/Eres Tú.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Contenedor de la historia -->
+  <div id="story-container">
+    <div class="act-label">ACTO 1</div>
+    <div class="story-slide">
+      <img src="img/manana.jpg" alt="Despertando" />
+      <div class="time">08:00 AM</div>
+      <div class="description">Me desperté leyendo tu mensaje...</div>
+    </div>
+    <div class="story-buttons">
+      <button id="prev-btn">Atrás</button>
+      <button id="next-btn">Adelante</button>
+      <!-- Botón de pregunta interactiva -->
+      <div id="question-btn-container">
+        <button>Haz la pregunta</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE PREGUNTA -->
+  <div id="question-modal">
+    <div id="question-container">
+      <div id="question-text">¿Cuál es tu elección?</div>
+
+      <!-- Botones de respuestas -->
+      <div id="answer-buttons">
+        <!-- Se generarán dinámicamente con JS -->
+      </div>
+
+      <!-- Contenedor para mostrar la respuesta seleccionada -->
+      <div id="question-result"></div>
+
+      <!-- Botón para elegir otra respuesta (inicialmente oculto) -->
+      <button id="choose-another" class="hidden">Elegir otra respuesta</button>
+    </div>
+  </div>
+
+  <!-- Script principal -->
+  <script src="./style/script.js"></script>
+</body>
+</html>
